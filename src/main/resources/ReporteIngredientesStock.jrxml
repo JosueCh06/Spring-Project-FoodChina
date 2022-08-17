@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.9.0.final using JasperReports Library version 6.9.0-cb8f9004be492ccc537180b49c026951f4220bf3  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteIngredientesStock" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="2f6914ec-d38d-4ce0-a16c-e943a693e47c">
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="idIngrediente" class="java.lang.Integer"/>
+	<field name="descripcion" class="java.lang.String"/>
+	<field name="stock" class="java.lang.Integer"/>
+	<field name="unidadMedida" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="169" splitType="Stretch">
+			<image>
+				<reportElement x="10" y="15" width="90" height="70" uuid="7fc17dfe-3519-42b4-9aea-2fce531051d3"/>
+				<imageExpression><![CDATA["C:/Users/Joseph Tello/Downloads/img.jpeg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="130" y="20" width="410" height="60" uuid="55003752-6fad-4b18-935e-4c123fede8e1"/>
+				<textElement textAlignment="Center">
+					<font fontName="Comic Sans MS" size="18" isBold="false"/>
+				</textElement>
+				<text><![CDATA[“Aquí se come como en casa pero sin tener que lavar los platos”]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="100" width="561" height="1" uuid="67ad938b-5c64-4971-a57e-202d3bfe2e2b"/>
+				<graphicElement>
+					<pen lineStyle="Solid" lineColor="#000000"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="75" y="110" width="410" height="50" uuid="0d35be9d-de26-4fc1-a526-e218c3641f4a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial Black" size="22" isBold="true" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[REPORTE DE INGREDIENTES]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="17" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="34" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="2" width="80" height="30" uuid="29ae1b78-cbea-424a-9c13-a0148798f71c">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d1e3ff21-fabf-41ab-8a27-433e4757d182"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="82" y="2" width="210" height="30" uuid="59d9a5c8-f1e1-4fd5-a635-57c9647a2e17">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="75f81fde-f44a-4a79-91ee-eeb19acd25e1"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DESCRIPCIÓN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="292" y="2" width="120" height="30" uuid="c39bea40-0269-4978-82ae-36ee913a9387">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ecac9a60-3b02-42b0-9cc2-17273c2fd5e2"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[STOCK]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="412" y="2" width="140" height="30" uuid="234791d3-910a-4ba9-a70e-692ebfb94dea">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="272fc4e1-a2e1-41a2-b9eb-8cc0e55424ad"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[UNIDAD DE MEDIDA]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="2" width="80" height="20" uuid="bbcbeba5-b7c3-4e19-a06a-68b70d50a1e4">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d1e3ff21-fabf-41ab-8a27-433e4757d182"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{idIngrediente}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="292" y="2" width="120" height="20" uuid="5b0427ab-e234-4d15-af5f-36766a76ae9d">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ecac9a60-3b02-42b0-9cc2-17273c2fd5e2"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{stock}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="82" y="2" width="210" height="20" uuid="9ec55221-1572-43c8-939d-c656d66c4144">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="75f81fde-f44a-4a79-91ee-eeb19acd25e1"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{descripcion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="412" y="0" width="140" height="22" uuid="d26af39a-58da-41e0-a49a-173e0f3458c6"/>
+				<textFieldExpression><![CDATA[$F{unidadMedida}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="57" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

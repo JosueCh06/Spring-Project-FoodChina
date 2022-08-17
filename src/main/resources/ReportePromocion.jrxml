@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.9.0.final using JasperReports Library version 6.9.0-cb8f9004be492ccc537180b49c026951f4220bf3  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReportePromocion" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="2db37f30-84e9-46f6-a1b3-df6f656be5f5">
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="numeroBoleta" class="java.lang.Integer"/>
+	<field name="fecha" class="java.util.Date"/>
+	<field name="usuario.nombre" class="java.lang.String"/>
+	<field name="totalPagar" class="java.lang.Double"/>
+	<field name="usuario.apellido" class="java.lang.String"/>
+	<variable name="DataCliente" class="java.lang.String">
+		<variableExpression><![CDATA[$F{usuario.nombre}+' '+$F{usuario.apellido}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="167" splitType="Stretch">
+			<image>
+				<reportElement x="10" y="10" width="100" height="80" uuid="caa84b76-3845-4fa2-9e73-6c807abfcf6b"/>
+				<imageExpression><![CDATA["C:/Users/Joseph Tello/Downloads/img.jpeg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="130" y="20" width="410" height="60" uuid="d9ef2f26-69bf-43c4-9b2d-b7d4dd596e59"/>
+				<textElement textAlignment="Center">
+					<font fontName="Comic Sans MS" size="18" isBold="false"/>
+				</textElement>
+				<text><![CDATA[“Aquí se come como en casa pero sin tener que lavar los platos”]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="100" width="561" height="1" uuid="ce1a00f5-7e70-4a27-a8bd-da276de4a7d4"/>
+				<graphicElement>
+					<pen lineStyle="Solid" lineColor="#000000"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="45" y="110" width="465" height="50" uuid="d5ba6151-edc9-4296-9099-842fbdc76832"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial Black" size="22" isBold="true" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[GANADORES DE LA PROMOCIÓN]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="15" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<staticText>
+				<reportElement x="20" y="3" width="100" height="30" uuid="6f2406a8-a22c-40ed-91a6-6d2a278c26eb">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8c7ff187-9951-4816-8fc2-54d5b6f56d61"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[N° Boleta]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="310" y="3" width="116" height="30" uuid="ac1929ed-c8f0-450c-8880-f0c3d5d30409">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="51a23b7e-9578-4741-a7d7-fa78cf12f67d"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[FECHA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="120" y="3" width="190" height="30" uuid="31eee57c-6035-4e4e-8cf5-1fd4d9fb3449">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="7b5f928c-f77a-42ac-a671-dae42f5e8bc6"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CLIENTE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="426" y="3" width="115" height="30" uuid="059b244b-1c3f-4a34-9923-074c5e08f639">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a58039cf-77d2-4d6d-8459-413fa974ef88"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total a Pagar]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="34" splitType="Stretch">
+			<textField>
+				<reportElement x="20" y="3" width="100" height="20" uuid="ef905ce9-e267-4dc1-b487-33c31d56afe8">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8c7ff187-9951-4816-8fc2-54d5b6f56d61"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{numeroBoleta}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="310" y="3" width="116" height="20" uuid="746d88ec-bfba-4f04-a374-550d9d7d5f37">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="51a23b7e-9578-4741-a7d7-fa78cf12f67d"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{fecha}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="426" y="3" width="115" height="20" uuid="83091ea0-b73d-46b0-9679-ed76c5d5a3ee">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a58039cf-77d2-4d6d-8459-413fa974ef88"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{totalPagar}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="120" y="3" width="190" height="20" uuid="aa7bc70e-5458-48df-8cc8-23ed72645fe7"/>
+				<textFieldExpression><![CDATA[$V{DataCliente}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

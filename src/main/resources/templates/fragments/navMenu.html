@@ -1,0 +1,61 @@
+<style>
+@font-face {
+  font-family: 'Open Sans';
+  src: url('/resources/fonts/deng-thick.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+</style>
+<nav  class="navbar navbar-expand-sm bg-dark navbar-dark" >
+		  	  <div class="navbar-header">
+			  	<div class="navbar-header">
+		     		<a class="navbar-brand" href="/menu" style = "font-family: 'Open Sans';">
+		     		<img src="/resources/images/menuBarLogo.jpg" alt="" width="34" height="28" class="d-inline-block align-text-top">
+      				CHINAFOOD</a>
+		  		</div>
+		  		</div>
+		  		
+		  		
+		  	<div class="collapse navbar-collapse">
+			  	<ul class="navbar-nav">
+				    <li class="nav-item" th:each="bean:${menus}">
+				      	<a class="nav-link" th:text="${bean.descripcion}" th:href="${bean.link}"></a>
+				    </li>
+			  	</ul>
+			  	
+			  	
+			  <div class="navbar-nav ml-auto">	
+			  
+			  <div class="dropdown navbar-nav">
+
+			    <a class="navbar-brand dropdown-toggle" data-bs-toggle="dropdown">
+			    <span th:text="${user}" style="color:#FFFFFF;"></span>
+			    <img src="/resources/images/icono-user.png" alt="" width="33" height="33" class="d-inline-block align-text-top">
+			    </a>
+
+			    <ul class="dropdown-menu">
+			    <li><h5 class="dropdown-header text-center" th:text="${usuario}"></h5></li>
+			      <li><a class="dropdown-item" href="#">Mi cuenta</a></li>
+			      <li>
+			      		<form class="dropdown-item" method="post" th:action="@{/logout}"> 
+							<input type="submit" class="btn btn-danger" value="Cerrar sesi�n">
+				        </form>
+				  </li>
+			    </ul>
+			  </div>
+		
+		
+			<div th:if="${carrito}">
+			  <a class="navbar-brand" th:href="${carrito}">
+			    <img src="/resources/images/icono-carrito.png" alt="" width="33" height="33" class="d-inline-block align-text-top">
+			    </a> 	
+			</div >
+			<div th:unless="${carrito}">
+			</div >
+			
+			       	       
+		      </div>
+	    	</div>
+	    
+	    	
+		</nav>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+  	<title>Sistema ChinaFood</title>
+    <meta http-equiv="Content-Type" content="text/html" charset="utf-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">	
+	<link rel="stylesheet" href="resources/css/style2.css">
+	
+	</head>
+
+<style>
+@font-face {
+  font-family: 'Open Sans';
+  src: url('resources/fonts/deng-thick.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+</style>
+	
+	<body class="ftco-body" style="background-image: url(resources/images/fondo.jpg);">
+	<br>
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-6 text-center mb-5">
+				<h1 class="heading-section" style = "color: #ffffff; font-family: 'Open Sans';font-size: 44px;">
+					<strong>CHINAFOOD RESTAURANTE</strong>
+				</h1>	
+				</div>
+			</div>
+				
+							
+			<div class="row justify-content-center">
+			
+				<div class="col-md-12 col-lg-10">
+					<div class="wrap d-md-flex">
+						<div class="img" style="background-image: url(resources/images/chinaLogin.jpg);">
+			      </div>
+						<div class="login-wrap p-4 p-md-5">
+			      	<div class="d-flex">
+			      		<div class="w-100">
+			      			<h3 class="mb-4">INICIAR SESI&#211N</h3>
+			      		</div>
+								<div class="w-100">
+									<p class="social-media d-flex justify-content-end">
+										<a href="#" class="social-icon d-flex align-items-center justify-content-center"><span class="fa fa-facebook"></span></a>
+										<a href="#" class="social-icon d-flex align-items-center justify-content-center"><span class="fa fa-twitter"></span></a>
+									</p>
+								</div>
+			      	</div>
+			      	<div class="alert alert-danger" th:if="${param.error}">Usuario
+							y/o contrase&#241;a incorrectas</div>
+						<div class="alert alert-success" th:if="${param.logout}">Sessi&#243;n
+							cerrada</div>
+							
+							<form action="login" method="post" class="signin-form">						
+			      		<div class="form-group mb-3">
+			      			<label class="label" for="name">Usuario</label>
+			      			<input type="text" class="form-control" placeholder="Ingrese usuario" required name="username">
+			      		</div>
+		            <div class="form-group mb-3">
+		            	<label class="label" for="password">Contrase&#241;a</label>
+		              <input type="password" class="form-control" placeholder="Ingrese contrase&#241;a" required name="password">
+		            </div>
+		            <div class="form-group">
+		            	<button type="submit" class="form-control btn btn-primary rounded submit px-3" >Ingresar</button>
+		            </div>
+		            <div class="form-group">
+						<a href="#" style="margin-left: 25%">&#191;Olvidaste tu contrase&#241;a?</a>
+		            </div>
+		          </form>
+		        </div>
+		      </div>
+				</div>
+			</div>
+			
+		</div>
+
+
+	<script src="resources/js/jquery.min.js"></script>
+  <script src="resources/js/popper.js"></script>
+  <script src="resources/js/bootstrap.min.js"></script>
+  <script src="resources/js/main.js"></script>
+
+	</body>
+</html>
